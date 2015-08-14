@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{38FAC159-11CE-4CEB-AA59-91BB9EBBD005}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DesignPattern</RootNamespace>
+    <AssemblyName>DesignPattern</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AbstractFactory\AustralianMeat.cs" />
+    <Compile Include="AbstractFactory\AustralianVegetable.cs" />
+    <Compile Include="AbstractFactory\ChineseMeat.cs" />
+    <Compile Include="AbstractFactory\AustralianRestaurant.cs" />
+    <Compile Include="AbstractFactory\ChineseVegetable.cs" />
+    <Compile Include="AbstractFactory\IMeat.cs" />
+    <Compile Include="AbstractFactory\ChineseRestaurant.cs" />
+    <Compile Include="AbstractFactory\IRestaurant.cs" />
+    <Compile Include="AbstractFactory\IVegetable.cs" />
+    <Compile Include="AdvanceBuilder\PersonBuilderDirector2.cs" />
+    <Compile Include="AdvanceBuilder\PersonBuilderDirector1.cs" />
+    <Compile Include="Builder\FatPersonBuilder.cs" />
+    <Compile Include="Builder\PersonBuilder.cs" />
+    <Compile Include="Builder\PersonBuilderDirector.cs" />
+    <Compile Include="Builder\ThinPersonBuilder.cs" />
+    <Compile Include="AdvanceBuilder\PersonBuilderDirectorBase.cs" />
+    <Compile Include="Factory\AegisShip.cs" />
+    <Compile Include="Factory\BattleShip.cs" />
+    <Compile Include="Factory\Warship.cs" />
+    <Compile Include="Factory\WarshipFactory.cs" />
+    <Compile Include="Observer\StockObserver.cs" />
+    <Compile Include="Observer\SydneyStock.cs" />
+    <Compile Include="Observer\IStock.cs" />
+    <Compile Include="Observer\IObserver.cs" />
+    <Compile Include="Prototype\Experience.cs" />
+    <Compile Include="Prototype\Prototype.cs" />
+    <Compile Include="Prototype\Resume.cs" />
+    <Compile Include="Singleton\Singleton.cs" />
+    <Compile Include="Strategy\CashReturn.cs" />
+    <Compile Include="Strategy\CashDiscount.cs" />
+    <Compile Include="Strategy\CashNormal.cs" />
+    <Compile Include="Strategy\CashSuper.cs" />
+    <Compile Include="Strategy\Context.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
