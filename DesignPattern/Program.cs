@@ -1,5 +1,6 @@
 ﻿using DesignPattern.AbstractFactory;
 using DesignPattern.Builder;
+using DesignPattern.Decorator;
 using DesignPattern.Factory;
 using DesignPattern.Observer;
 using DesignPattern.Prototype;
@@ -125,6 +126,14 @@ namespace DesignPattern.Strategy
             r2.id = 2;
             r2.Name = "P2";
             r2.Experience.Company = "C2";
+            #endregion
+
+            #region Decorator
+            Pizza pp = new PlainPizza();
+            ToppingPizza tp = new Mozzarella(pp);
+            ToppingPizza ts = new TomatoSauce(tp);
+            ts.GetDescription();
+
             #endregion
 
             Console.ReadLine();

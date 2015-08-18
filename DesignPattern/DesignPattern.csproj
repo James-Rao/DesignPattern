@@ -57,6 +57,11 @@
     <Compile Include="Builder\PersonBuilderDirector.cs" />
     <Compile Include="Builder\ThinPersonBuilder.cs" />
     <Compile Include="AdvanceBuilder\PersonBuilderDirectorBase.cs" />
+    <Compile Include="Decorator\TomatoSouce.cs" />
+    <Compile Include="Decorator\Mozzarella.cs" />
+    <Compile Include="Decorator\ToppingPizza.cs" />
+    <Compile Include="Decorator\PlainPizza.cs" />
+    <Compile Include="Decorator\Pizza.cs" />
     <Compile Include="Factory\AegisShip.cs" />
     <Compile Include="Factory\BattleShip.cs" />
     <Compile Include="Factory\Warship.cs" />
