@@ -1,11 +1,13 @@
 ﻿using DesignPattern.AbstractFactory;
 using DesignPattern.Builder;
+using DesignPattern.Command;
 using DesignPattern.Decorator;
 using DesignPattern.Factory;
 using DesignPattern.Observer;
 using DesignPattern.Prototype;
 using DesignPattern.Singleton;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -134,6 +136,19 @@ namespace DesignPattern.Strategy
             ToppingPizza ts = new TomatoSauce(tp);
             ts.GetDescription();
 
+            #endregion
+
+            #region Command
+            Cook barbecuerCook = new BarbecuerCook();
+            Cook fryDishCook = new FryDishCook();
+            Command.Command barbecuerCommand = new BarbecuerCommand(barbecuerCook);
+            Command.Command fryDishCommand = new FryDishCommand(fryDishCook);
+
+            Waiter waiter = new Waiter();
+            waiter.AddCommand(barbecuerCommand);
+            waiter.AddCommand(fryDishCommand);
+            waiter.Notify();
+            
             #endregion
 
             Console.ReadLine();

@@ -57,6 +57,13 @@
     <Compile Include="Builder\PersonBuilderDirector.cs" />
     <Compile Include="Builder\ThinPersonBuilder.cs" />
     <Compile Include="AdvanceBuilder\PersonBuilderDirectorBase.cs" />
+    <Compile Include="Command\BarbecuerCommand.cs" />
+    <Compile Include="Command\FryDishCommand.cs" />
+    <Compile Include="Command\Waiter.cs" />
+    <Compile Include="Command\FryDishCook.cs" />
+    <Compile Include="Command\BarbecuerCook.cs" />
+    <Compile Include="Command\Command.cs" />
+    <Compile Include="Command\Cook.cs" />
     <Compile Include="Decorator\TomatoSouce.cs" />
     <Compile Include="Decorator\Mozzarella.cs" />
     <Compile Include="Decorator\ToppingPizza.cs" />
