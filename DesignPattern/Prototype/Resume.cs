@@ -26,5 +26,10 @@ namespace DesignPattern.Prototype
         //    r.Experience = (Experience)this.Experience.Clone();
         //    return r;
         //}
+
+        public override string ToString()
+        {
+            return "ID: " + id + " Name: " + Name + " Experience: " + Experience;
+        }
     }
 }

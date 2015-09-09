@@ -14,5 +14,10 @@ namespace DesignPattern.Prototype
         //{
         //    return (object)this.MemberwiseClone();
         //}
+
+        public override string ToString()
+        {
+            return Company + " " + Years;
+        }
     }
 }

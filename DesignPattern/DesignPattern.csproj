@@ -50,6 +50,11 @@
     <Compile Include="AbstractFactory\ChineseRestaurant.cs" />
     <Compile Include="AbstractFactory\IRestaurant.cs" />
     <Compile Include="AbstractFactory\IVegetable.cs" />
+    <Compile Include="Adapter\CenterInterpreter.cs" />
+    <Compile Include="Adapter\ChineseCenter.cs" />
+    <Compile Include="Adapter\Guard.cs" />
+    <Compile Include="Adapter\Forward.cs" />
+    <Compile Include="Adapter\BasketballPlayer.cs" />
     <Compile Include="AdvanceBuilder\PersonBuilderDirector2.cs" />
     <Compile Include="AdvanceBuilder\PersonBuilderDirector1.cs" />
     <Compile Include="Builder\FatPersonBuilder.cs" />
@@ -69,6 +74,10 @@
     <Compile Include="Decorator\ToppingPizza.cs" />
     <Compile Include="Decorator\PlainPizza.cs" />
     <Compile Include="Decorator\Pizza.cs" />
+    <Compile Include="Facade\FundFacade.cs" />
+    <Compile Include="Facade\NationalDebt.cs" />
+    <Compile Include="Facade\Realty.cs" />
+    <Compile Include="Facade\Stock.cs" />
     <Compile Include="Factory\AegisShip.cs" />
     <Compile Include="Factory\BattleShip.cs" />
     <Compile Include="Factory\Warship.cs" />
