@@ -57,6 +57,16 @@
     <Compile Include="Adapter\BasketballPlayer.cs" />
     <Compile Include="AdvanceBuilder\PersonBuilderDirector2.cs" />
     <Compile Include="AdvanceBuilder\PersonBuilderDirector1.cs" />
+    <Compile Include="Composite\FileFolder.cs" />
+    <Compile Include="Composite\File.cs" />
+    <Compile Include="Composite\FileComponent.cs" />
+    <Compile Include="Template\MediaProtocol.cs" />
+    <Compile Include="Template\Tcp.cs" />
+    <Compile Include="Template\Udp.cs" />
+    <Compile Include="Bridge\Communication.cs" />
+    <Compile Include="Bridge\Tcp.cs" />
+    <Compile Include="Bridge\Udp.cs" />
+    <Compile Include="Bridge\IProtocol.cs" />
     <Compile Include="Builder\FatPersonBuilder.cs" />
     <Compile Include="Builder\PersonBuilder.cs" />
     <Compile Include="Builder\PersonBuilderDirector.cs" />

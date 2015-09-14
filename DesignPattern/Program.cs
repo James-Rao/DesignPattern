@@ -1,13 +1,16 @@
 ﻿using DesignPattern.AbstractFactory;
 using DesignPattern.Adapter;
+using DesignPattern.Bridge;
 using DesignPattern.Builder;
 using DesignPattern.Command;
+using DesignPattern.Composite;
 using DesignPattern.Decorator;
 using DesignPattern.Facade;
 using DesignPattern.Factory;
 using DesignPattern.Observer;
 using DesignPattern.Prototype;
 using DesignPattern.Singleton;
+using DesignPattern.Template;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -187,6 +190,45 @@ namespace DesignPattern.Strategy
             ff.Buy();
             ff.Sell();
             #endregion 
+
+
+            #region Bridge
+            {
+                Console.WriteLine("------------Bridge---------------------");
+                IProtocol udp = new Bridge.Udp();
+                IProtocol tcp = new Bridge.Tcp();
+                Communication c = new Communication();
+                c.SetProtocol(udp);
+                c.Work();
+                c.SetProtocol(tcp);
+                c.Work();
+            }
+            #endregion
+
+            #region Template
+            {
+                Console.WriteLine("------------Template-----------------------");
+                MediaProtocol tcp = new Template.Tcp();
+                tcp.Work();
+                MediaProtocol udp = new Template.Udp();
+                udp.Work();
+            }
+
+            #endregion
+
+            #region Composite
+            {
+                Console.WriteLine("------------Composite-----------------------");
+                FileComponent First = new FileFolder() { Name = "C"};
+                FileComponent second1 = new FileFolder() { Name = "-Folder1"};
+                FileComponent second2 = new File() {  Name = "-File2"};
+                FileComponent second1_1 = new File() {  Name = "--File1_1"};
+                second1.Add(second1_1);
+                First.Add(second1);
+                First.Add(second2);
+                First.Display();
+            }
+            #endregion
 
             Console.ReadLine();
         }
